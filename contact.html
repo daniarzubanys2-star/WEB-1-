@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Parts and prices of my PC build, and a form to send me your own build request.">
+  <title>Parts and contact — MyPC Lab</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="index.html">MyPC&nbsp;Lab</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">Build</a></li>
+        <li><a class="nav-link active" href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="section">
+      <h1>Parts, prices and requests</h1>
+      <p class="lead">
+        Below is the real part list of the machine I assembled in February 2026,
+        with the prices I paid in Astana. Under the table you can send me the
+        parameters of the build you want, and I will answer with a part list.
+      </p>
+
+      <h2>My build: parts and prices</h2>
+
+      <table class="parts">
+        <caption>Part list of the MyPC Lab desktop, February 2026</caption>
+        <thead>
+          <tr>
+            <th scope="col">Group</th>
+            <th scope="col">Part</th>
+            <th scope="col">Model</th>
+            <th scope="col">Price, KZT</th>
+            <th scope="col">Warranty</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="rowgroup" rowspan="3">Core</th>
+            <th scope="row">Processor</th>
+            <td>AMD Ryzen 5 7600X</td>
+            <td class="num">145 000</td>
+            <td>3 years</td>
+          </tr>
+          <tr>
+            <th scope="row">Motherboard</th>
+            <td>MSI B650M Pro</td>
+            <td class="num">95 000</td>
+            <td>3 years</td>
+          </tr>
+          <tr>
+            <th scope="row">Memory</th>
+            <td>32 GB DDR5 6000 MHz</td>
+            <td class="num">60 000</td>
+            <td>10 years</td>
+          </tr>
+          <tr>
+            <th scope="rowgroup" rowspan="2">Graphics and storage</th>
+            <th scope="row">Video card</th>
+            <td>Radeon RX 7600 8 GB</td>
+            <td class="num">160 000</td>
+            <td>3 years</td>
+          </tr>
+          <tr>
+            <th scope="row">Drive</th>
+            <td>NVMe SSD 1 TB</td>
+            <td class="num">40 000</td>
+            <td>5 years</td>
+          </tr>
+          <tr>
+            <th scope="rowgroup" rowspan="2">Power and case</th>
+            <th scope="row">Power supply</th>
+            <td>650 W, 80+ Gold</td>
+            <td class="num">45 000</td>
+            <td>7 years</td>
+          </tr>
+          <tr>
+            <th scope="row">Case</th>
+            <td>Mid tower, 3 fans</td>
+            <td class="num">30 000</td>
+            <td>2 years</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row" colspan="3">Total cost of the build</th>
+            <td class="num">575 000</td>
+            <td>—</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <h2>Tell me about your build</h2>
+      <p>No data is sent anywhere: this form is a study example.</p>
+
+      <form class="build-form" action="#" method="get">
+
+        <fieldset>
+          <legend>Who you are</legend>
+
+          <p class="field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="Aidos" required>
+          </p>
+
+          <p class="field">
+            <label for="email">Email for the answer</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </p>
+
+          <p class="field">
+            <label for="budget">Budget, KZT</label>
+            <input type="number" id="budget" name="budget" min="200000" max="3000000" step="10000" value="500000">
+          </p>
+
+          <p class="field">
+            <label for="ready">Date you want it ready</label>
+            <input type="date" id="ready" name="ready">
+          </p>
+
+          <p class="field">
+            <label for="accent">Colour of the case lighting</label>
+            <input type="color" id="accent" name="accent" value="#1f5fd0">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>What the PC is for</legend>
+
+          <p class="field choice">
+            <input type="radio" id="use-study" name="usage" value="study" checked>
+            <label for="use-study">Study and code</label>
+          </p>
+          <p class="field choice">
+            <input type="radio" id="use-games" name="usage" value="games">
+            <label for="use-games">Games</label>
+          </p>
+          <p class="field choice">
+            <input type="radio" id="use-video" name="usage" value="video">
+            <label for="use-video">Video and 3D</label>
+          </p>
+
+          <p class="field choice">
+            <input type="checkbox" id="quiet" name="quiet" value="yes">
+            <label for="quiet">Keep it as quiet as possible</label>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Details</legend>
+
+          <p class="field">
+            <label for="message">Anything I should know</label>
+            <textarea id="message" name="message" rows="5" maxlength="500"
+                      placeholder="Parts you already have, size of the desk, monitor resolution"></textarea>
+          </p>
+        </fieldset>
+
+        <button class="submit" type="submit">Send my request</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>MyPC Lab — student project for the Web Technologies course, 2026.</p>
+  </footer>
+
+</body>
+</html>
